@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NLOpt: Natural Language Optimization</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg-gradient"></div>
+    <div class="bg-gradient bg-gradient-2"></div>
+    
+    <div class="container">
+        <header>
+            <h1>NLOpt</h1>
+            <p>Natural-Language Compiler Optimization Playground</p>
+        </header>
+
+        <main>
+            <div class="glass-panel input-section">
+                <h2>1. Define Optimization Rule</h2>
+                <p class="subtitle">Write your optimization rule in controlled English.</p>
+                <textarea id="ruleInput" placeholder="e.g. For an addition with zero, replace the operation with the other operand.">For an addition with zero, replace the operation with the other operand.</textarea>
+                
+                <h2>2. Test Expression</h2>
+                <p class="subtitle">Provide a mathematical expression to test the rule.</p>
+                <input type="text" id="expressionInput" placeholder="e.g. x + 0" value="x + 0">
+                <p class="note">Supported: +, -, *, /, (, ), integers, and variables.</p>
+
+                <button id="optimizeBtn">Compile & Optimize</button>
+            </div>
+
+            <div class="glass-panel output-section">
+                <h2>Compiler Pipeline Output</h2>
+                <div class="output-container" id="terminalOutput">
+                    <div class="placeholder-text">Awaiting execution...</div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
